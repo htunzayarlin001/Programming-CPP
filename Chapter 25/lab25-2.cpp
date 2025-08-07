@@ -3,7 +3,7 @@
 
 class Base_class {
 	public:
-	int base, height,depth;
+	int base, height, depth;
 	int width, length;
 	double radius;	
 	
@@ -15,79 +15,79 @@ class Base_class {
 		std::cout<<"perimeter() in Base class"<<std::endl;
 	}
 };
+
 class Triangle : public Base_class {
 	public:
 	Triangle(){
-		base=10;height=2;
+		base=10; height=2;
 	}
-		void findArea(){
-			std::cout<<"Area of Triangle is "<<(0.5*base*height)<<std::endl;
-		}
-		void perimeter() {
-			double c=std::sqrt((base*base)+(height*height));
-			std::cout<<"Perimeter of triangle is "<< (base+height+c)<<std::endl;
-		}
+	void findArea(){
+		std::cout<<"Area of Triangle is "<<(0.5*base*height)<<std::endl;
+	}
+	void perimeter() {
+		double c = std::sqrt((base*base)+(height*height));
+		std::cout<<"Perimeter of triangle is "<< (base+height+c)<<std::endl;
+	}
 };
 
 class Rectangle : public Base_class {
 	public:
-		Rectangle(){
-			width=10;length=18;
-		}
-		public:
-		void findArea(){
-			std::cout<<"Area of Rectangle is "<<(width*length)<<std::endl;
-		}
-		void perimeter() {
-			std::cout<<"Perimeter of Rectangle is "<< (2*(width+length))<<std::endl;
-};
+	Rectangle(){
+		width=10; length=18;
+	}
+	void findArea(){
+		std::cout<<"Area of Rectangle is "<<(width*length)<<std::endl;
+	}
+	void perimeter() {
+		std::cout<<"Perimeter of Rectangle is "<< (2*(width+length))<<std::endl;
+	}
+}; 
 
 class Circle : public Base_class {
 	public:
-	 Circle(double rr) {
-        radius = rr;
-    }
+	Circle(double rr) {
+		radius = rr;
+	}
 
 	void findArea(){
-			std::cout<<"Area of Triangle is "<<(0.5*base*height)<<std::endl;
-		}
-		void perimeter() {
-			double c=std::sqrt((base*base)+(height*height));
-			std::cout<<"Perimeter of triangle is "<< (base+height+c)<<std::endl;
-		}
-	
+		std::cout<<"Area of Triangle is "<<(0.5*base*height)<<std::endl;
+	}
+	void perimeter() {
+		double c = std::sqrt((base*base)+(height*height));
+		std::cout<<"Perimeter of triangle is "<< (base+height+c)<<std::endl;
+	}
 };
 
 class threeDTriangle : public Triangle {
 	public:
 	threeDTriangle(){
-		base=10;height=2;depth=3;
+		base=10; height=2; depth=3;
 	}
-void findArea(){
-			std::cout<<"Area of Triangle is "<<(0.5*base*height*depth)<<std::endl;
-		}
-		void perimeter() {
-			double c=std::sqrt((base*base)+(height*height));
-			std::cout<<"Perimeter of triangle is "<< (base+height+c)<<std::endl;
-		}
+	void findArea(){
+		std::cout<<"Area of threeDTriangle is "<<(0.5*base*height*depth)<<std::endl;
+	}
+	void perimeter() {
+		double c = std::sqrt((base*base)+(height*height));
+		std::cout<<"Perimeter of threeDtriangle is "<< (base+height+c)<<std::endl;
+	}
 };
 
 int main() {
-    Triangle tr;
-    tr.findArea();
-    tr.perimeter();
+	Triangle tr;
+	tr.findArea();
+	tr.perimeter();
 
-    Rectangle rec;
-    rec.findArea();
-    rec.perimeter();
+	Rectangle rec;
+	rec.findArea();
+	rec.perimeter();
 
-    Circle cr(10);
-    cr.findArea();
-    cr.perimeter();
-    
-    threeDTriangle tr3;
-    tr3.findArea();
-    tr3.perimeter();
+	Circle cr(10);
+	cr.findArea();
+	cr.perimeter();
+	
+	threeDTriangle tr3;
+	tr3.findArea();
+	tr3.perimeter();
 
-    return 0;
+	return 0;
 }
