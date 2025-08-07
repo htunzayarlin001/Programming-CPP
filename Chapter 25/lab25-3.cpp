@@ -49,13 +49,12 @@ class Circle : public Base_class {
 		radius = rr;
 	}
 
-	void findArea(){
-		std::cout<<"Area of Triangle is "<<(0.5*base*height)<<std::endl;
-	}
-	void perimeter() {
-		double c = std::sqrt((base*base)+(height*height));
-		std::cout<<"Perimeter of triangle is "<< (base+height+c)<<std::endl;
-	}
+	void findArea() {
+    std::cout << "Area of Circle is " << (M_PI * radius * radius) << std::endl;
+}
+void perimeter() {
+    std::cout << "Perimeter of Circle is " << (2 * M_PI * radius) << std::endl;
+}
 };
 
 class threeDTriangle : public Triangle {
